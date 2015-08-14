@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+    <body>
+        @* start mdl *@
+    
+        @*<!-- uses a transparent header that draws on top of the layout's background -->
+        <style>
+            .layout-transparent {
+                 background: url('tranparent.jpeg') center / cover;
+            }
+
+                       .layout-transparent .mdl-layout__header,
+                       .layout-transparent .mdl-layout__drawer-button {
+                           /* this background is dark, so we set text to white. use 87% black instead if
+            your background is light. */
+                           color: white;
+                       }
+        </style>
+        <div class="layout-transparent mdl-layout mdl-js-layout" style="z-index:1">
+            <header class="mdl-layout__header mdl-layout__header--transparent">
+                <div class="mdl-layout__header-row">
+                    <!-- title -->
+                    <span class="mdl-layout-title">title</span>
+                    <!-- add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- navigation -->
+                    <nav class="mdl-navigation">
+                        <a class="mdl-navigation__link" href="">link</a>
+                        <a class="mdl-navigation__link" href="">link</a>
+                        <a class="mdl-navigation__link" href="">link</a>
+                        <a class="mdl-navigation__link" href="">link</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">title</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="">link</a>
+                    <a class="mdl-navigation__link" href="">link</a>
+                    <a class="mdl-navigation__link" href="">link</a>
+                    <a class="mdl-navigation__link" href="">link</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+            </main>
+        </div>*@    
+
+        @* end mdl *@
+        
+    <div >
+        <style>
+            
+        </style>
+        <div class="layout-transparent mdl-layout mdl-js-layout" style="z-index:1">
+            <header class="mdl-layout__header mdl-layout__header--transparent">
+                <div class="mdl-layout__header-row">
+                    <!-- title -->
+                    <span class="mdl-layout-title">title</span>
+                    <!-- add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- navigation -->
+                    <nav class="mdl-navigation">
+                        @Html.ActionLink("Developer", "index", "developer")
+                        <a class="mdl-navigation__link" href="/developer">Developer</a>
+                        <a class="mdl-navigation__link" href="">link</a>
+                        <a class="mdl-navigation__link" href="">link</a>
+                        <a class="mdl-navigation__link" href="">link</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">title</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="">link</a>
+                    <a class="mdl-navigation__link" href="">link</a>
+                    <a class="mdl-navigation__link" href="">link</a>
+                    <a class="mdl-navigation__link" href="">link</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+            </main>
+        </div>
+    </div>
+        <div class="container body-content" style="z-index:2">
+            @RenderBody()
+            @*<hr />*@
+            <footer style="position:absolute; bottom:0">
+                <p class="text-center">&copy; @DateTime.Now.Year - Reeshad &amp; S.Shuvho</p>
+            </footer>
+        </div>
+        
+        
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
+        
+    
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
