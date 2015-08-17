@@ -2,6 +2,7 @@
    background: url('../tranparent.jpeg') center / cover;
     /*padding-top: 50px;*/
     padding-bottom: 20px;
+    color: #fff;
     
 }
 
@@ -13,6 +14,7 @@
 }
 .layout-transparent {
                 background: url('tranparent.jpeg') center / cover;
+                z-index:initial;
             }
 
                 .layout-transparent .mdl-layout__header,
@@ -51,4 +53,8 @@ input[type="checkbox"].input-validation-error {
 
 .validation-summary-valid {
     display: none;
+}
+.jumbotron{
+    color: #000000;
+    
 }
