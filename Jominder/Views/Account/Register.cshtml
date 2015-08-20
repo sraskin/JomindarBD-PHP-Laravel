@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Register";
 }
-
+<div class="container">
 <h2>@ViewBag.Title.</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
@@ -35,6 +35,13 @@
         </div>
     </div>
 }
+    @*new form start*@
+
+    @*new form end*@
+
+
+
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

@@ -8,6 +8,13 @@
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="~/Content/css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async="" src="~/Content/ga.js"></script>
+    <script type="text/javascript" src="~/Content/modernizr.custom.79639.js"></script>
+    <noscript>&lt;link rel="stylesheet" type="text/css" href="css/noJS.css" /&gt;</noscript>
+    <script type="text/javascript"></script>
+
 
 </head>
     <body>
@@ -22,10 +29,11 @@
                     <!-- navigation -->
                     <nav class="mdl-navigation">
                         @Html.ActionLink("Home", "index", "home")
+                        &nbsp; &nbsp;
                         @Html.ActionLink("Developer", "index", "developer")
-                        <a class="mdl-navigation__link" href="">link</a>
-                        <a class="mdl-navigation__link" href="">link</a>
-                        <a class="mdl-navigation__link" href="">link</a>
+                        &nbsp; &nbsp;
+                        @Html.ActionLink("Land Owner", "index", "LandOwner")
+                        
                     </nav>
                 </div>
             </header>
@@ -51,7 +59,7 @@
             </footer>
         </div>
         
-        
+        <script type="text/javascript" src="~/Content/jquery.min.js"></script>
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
         
     
