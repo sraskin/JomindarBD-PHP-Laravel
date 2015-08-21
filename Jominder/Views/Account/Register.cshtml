@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "Register";
 }
+
+<link rel="stylesheet" href="~/Content/form.css">
 <div class="container">
 <h2>@ViewBag.Title.</h2>
 
@@ -36,6 +38,20 @@
     </div>
 }
     @*new form start*@
+
+    <h1 class="register-title">Welcome</h1>
+    <form class="register">
+        <div class="register-switch" style="height: 40px;">
+            <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
+            <label for="sex_f" class="register-switch-label">Land owner</label>
+            <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
+            <label for="sex_m" class="register-switch-label">Developer</label>
+        </div>
+        <input type="email" class="register-input" placeholder="Email address">
+        <input type="password" class="register-input" placeholder="Password">
+        <input type="password" class="register-input" placeholder="Confirm password">
+        <input type="submit" value="Register" class="register-button">
+    </form>
 
     @*new form end*@
 
