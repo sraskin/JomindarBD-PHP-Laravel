@@ -52,7 +52,7 @@ namespace Jominder.Controllers
             {
                 db.Developer.Add(developer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create");
             }
 
             return View(developer);

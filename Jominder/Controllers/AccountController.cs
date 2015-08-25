@@ -372,7 +372,7 @@ namespace Jominder.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("DeveloperHome", "Home");
             }
         }
 

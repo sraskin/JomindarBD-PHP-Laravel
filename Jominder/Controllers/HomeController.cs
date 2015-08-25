@@ -20,9 +20,23 @@ namespace Jominder.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult DeveloperHome()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Packages()
+        {
+            ViewBag.Message = "Your Packages page.";
+
+            return View();
+        }
+
+        public ActionResult PackegePlan()
+        {
+            ViewBag.Message = "Your Packages page.";
 
             return View();
         }

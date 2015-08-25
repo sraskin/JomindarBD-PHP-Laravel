@@ -1,0 +1,155 @@
+﻿@{
+    ViewBag.Title = "Developer Home";
+}
+<div class="container">
+    
+    <div class="jumbotron text-center">
+        <p class="lead">Choose your desired location</p>
+
+        <div class="container">
+            <section class="main">
+                <div class="wrapper-demo" style="width:0; height:0;">
+                    <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+                        <span>Dhaka <span class=" badge">28</span></span>
+                        <ul class="dropdown">
+                            <li><a href="/Home/Packages">Dhanmondi <span class=" badge"> 5</span></a></li>
+                            <li><a href="#">Gulshan <span class=" badge">0</span></a></li>
+                            <li><a href="#">Banani<span class=" badge">2</span></a></li>
+                            <li><a href="#">Uttara<span class=" badge">20</span></a></li>
+                            <li><a href="#">Malibag<span class=" badge">1</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script type="text/javascript" src="~/Content/jquery.min.js"></script>
+        <script type="text/javascript">
+
+			  function DropDown(el) {
+				this.dd = el;
+				this.placeholder = this.dd.children('span');
+				this.opts = this.dd.find('ul.dropdown > li');
+				this.val = '';
+				this.index = -1;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						return false;
+					});
+
+					obj.opts.on('click',function(){
+						var opt = $(this);
+						obj.val = opt.text();
+						obj.index = opt.index();
+						obj.placeholder.text(obj.val);
+					});
+				},
+				getValue : function() {
+					return this.val;
+				},
+				getIndex : function() {
+					return this.index;
+				}
+			}
+      $(function() {
+
+				var dd = new DropDown( $('#dd') );
+        $(document).click(function() {
+				$('.wrapper-dropdown-3').removeClass('active');
+				});
+      	});
+        </script>
+
+        <div class="container">
+            <section class="main">
+                <div class="wrapper-demo" style=" width: 0px; 
+                                                  height: 0px; 
+                                                  padding-top: -50;
+                                                  padding-left: 210px; 
+                                                  padding-bottom: 0px;
+                                                  border-bottom-width: 50px;
+                                                  border-top-width: -50;
+                                                  margin-top: 0px;
+                                                  margin-bottom: 0px;">
+                    <div id="ee" class="wrapper-dropdown-3" tabindex="1">
+                        <span>Khulna</span>
+                        <ul class="dropdown">
+                            <li><a href="#">Bogra Sadar</a></li>
+                            <li><a href="#">Bogra Sadar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <section class="main">
+                <div class="wrapper-demo" style=" width: 0px;
+                                                  height: 0px;
+                                                  padding-top: -50;
+                                                  padding-left: 420px;
+                                                  padding-bottom: 0px;
+                                                  border-bottom-width: 50px;
+                                                  border-top-width: -50;
+                                                  margin-top: 0px;
+                                                  margin-bottom: 0px;">
+                    <div id="ee" class="wrapper-dropdown-3" tabindex="1">
+                        <span>Rajshahi</span>
+                        <ul class="dropdown">
+                            <li><a href="#">Bogra Sadar</a></li>
+                            <li><a href="#">Bogra Sadar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <section class="main">
+                <div class="wrapper-demo" style=" width: 0px;
+                                                  height: 0px;
+                                                  padding-top: -50;
+                                                  padding-left: 630px;
+                                                  padding-bottom: 0px;
+                                                  border-bottom-width: 50px;
+                                                  border-top-width: -50;
+                                                  margin-top: 0px;
+                                                  margin-bottom: 0px;">
+                    <div id="ee" class="wrapper-dropdown-3" tabindex="1">
+                        <span>Sylhet</span>
+                        <ul class="dropdown">
+                            <li><a href="#">Bogra Sadar</a></li>
+                            <li><a href="#">Bogra Sadar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <section class="main">
+                <div class="wrapper-demo" style=" width: 0px;
+                                                  height: 0px;
+                                                  padding-top: -50;
+                                                  padding-left: 840px;
+                                                  padding-bottom: 0px;
+                                                  border-bottom-width: 50px;
+                                                  border-top-width: -50;
+                                                  margin-top: 0px;
+                                                  margin-bottom: 185px;">
+                    <div id="ee" class="wrapper-dropdown-3" tabindex="1">
+                        <span>Chittagong</span>
+                        <ul class="dropdown">
+                            <li><a href="#">Bogra Sadar</a></li>
+                            <li><a href="#">Bogra Sadar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        @*<p><a href="http://jominder.com" class="btn btn-primary btn-large">Learn more &raquo;</a></p>*@
+    </div>
+</div>

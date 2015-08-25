@@ -28,6 +28,7 @@ input,
 select,
 textarea {
     max-width: 280px;
+    color:#000000;
 }
 
 /* styles for validation helpers */
@@ -54,7 +55,8 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
-.jumbotron{
-    color: #000000;
-    
+.jumbotron {
+   background: rgb(1, 12, 12); /* This is for ie8 and below */
+   background: rgba(1, 12, 12, 0.3); 
 }
+

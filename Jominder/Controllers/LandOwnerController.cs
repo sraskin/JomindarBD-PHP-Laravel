@@ -52,7 +52,7 @@ namespace Jominder.Controllers
             {
                 db.LandOwner.Add(landowner);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create");
             }
 
             return View(landowner);
@@ -114,6 +114,8 @@ namespace Jominder.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
 
         protected override void Dispose(bool disposing)
         {

@@ -1,11 +1,14 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Jomindar</title>
+    
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="~/Content/style.css">
@@ -14,7 +17,10 @@
     <script type="text/javascript" src="~/Content/modernizr.custom.79639.js"></script>
     <noscript>&lt;link rel="stylesheet" type="text/css" href="css/noJS.css" /&gt;</noscript>
     <script type="text/javascript"></script>
-
+    <link href="~/Content/csss" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/Content/reset.css">
+    <link rel="stylesheet" href="~/Content/stylee.css"> 
+    <script src="~/Content/modernizr.js"></script>
 
 </head>
     <body>
@@ -22,28 +28,37 @@
         <div class="layout-transparent mdl-layout mdl-js-layout">
             <header class="mdl-layout__header mdl-layout__header--transparent">
                 <div class="mdl-layout__header-row">
-                    <!-- title -->
-                    <span class="mdl-layout-title">Jomindar</span>
-                    <!-- add spacer, to align navigation to the right -->
+                    <span class="mdl-layout-title style="padding-left: 65px;"><a href="/Home">Jomindar.com</a></span>
                     <div class="mdl-layout-spacer"></div>
-                    <!-- navigation -->
                     <nav class="mdl-navigation">
-                        @Html.ActionLink("Home", "index", "home")
-                        &nbsp; &nbsp;
-                        @Html.ActionLink("Developer", "index", "developer")
-                        &nbsp; &nbsp;
-                        @Html.ActionLink("Land Owner", "index", "LandOwner")
+                         
+                        <p><a href="/Home"><span class="glyphicon glyphicon-home"></span> Home</a></p>
+                        &nbsp;&nbsp;
+                        <p><a href="/Home/PackegePlan"><span class="glyphicon glyphicon-bullhorn"></span> Package Plan</a></p>
+                        &nbsp;&nbsp;
+                        <p><a href="/Home/About"><span class="glyphicon glyphicon-info-sign"></span> About</a></p>
+                        &nbsp;&nbsp;
+                        
+                        @Html.Partial("_LoginPartial") 
                         
                     </nav>
                 </div>
             </header>
             <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Jomindar</span>
+                <span class="mdl-layout-title" style="margin-left:30px">Jomindar</span>
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="">link</a>
-                    <a class="mdl-navigation__link" href="">link</a>
-                    <a class="mdl-navigation__link" href="">link</a>
-                    <a class="mdl-navigation__link" href="">link</a>
+                    <p style="margin-left:70px"><a href="/Home"><span class="glyphicon glyphicon-home"></span> About us</a></p>
+                    &nbsp;&nbsp;
+                    <p style="margin-left:70px"><a href="#"><span class="glyphicon glyphicon-bullhorn"></span> Contacts us</a></p>
+                    &nbsp;&nbsp;
+                    <a style="margin-left:50px" target="_blank" title="find us on Facebook" href="http://www.facebook.com/">
+                    <img alt="follow me on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0></a>
+                    <a style="margin-left:100px; margin-top:-34px;" target="_blank" title="follow me on twitter" href="http://www.twitter.com/">
+                    <img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter-b_30x30.png" border=0></a>
+
+                    <a style="margin-left:150px; margin-top:-34px;" target="_blank" title="follow me on twitter" href="http://www.gmial.com/">
+                        <img alt="follow me on twitter" src="http://icons.iconarchive.com/icons/graphics-vibe/classic-3d-social/32/google-icon.png" border=0>
+                    </a>
                 </nav>
             </div>
             <main class="mdl-layout__content">
@@ -59,10 +74,10 @@
             </footer>
         </div>
         
+        <script src="~/Content/jquery-2.1.1.js"></script>
+        <script src="~/Content/main.js"></script>
         <script type="text/javascript" src="~/Content/jquery.min.js"></script>
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
-        
-    
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
